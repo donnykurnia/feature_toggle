@@ -10,7 +10,7 @@ module Arkency
       block.call if on?(name, *args)
     end
 
-    def on?(name, *args)
+    ruby2_keywords def on?(name, *args)
       @flags.fetch(name, proc{|*_args| false }).call(*args)
     end
 
